@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Book Catalouge</title>
+	    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/loginC.css') }}">
+
+  
+</head>
+
+<body>
+  <body>
+<div class="container">
+	<section id="content">
+		<form action="/login/access" id="loginForm" method="post">
+			<h1>Login Form</h1>
+			{% if errorCode ==1 %}
+			<p style="color:red">{{ error }}</p>
+			{% endif %}
+
+			<div>
+				<input type="text" name="username" placeholder="Username" required="" id="username" />
+			</div>
+			<div>
+				<input type="password" name="password" placeholder="Password" required="" id="password" />
+			</div>
+			<div>
+				<input type="submit" value="Log in" />
+				</div>
+		</form><!-- form -->
+		</section><!-- content -->
+</div><!-- container -->
+</body>
+  
+    <script src="/static/assets/js/index.js"></script>
+
+</body>
+</html>
